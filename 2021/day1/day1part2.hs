@@ -38,7 +38,7 @@ report path f = do
   putStr "Part 1 answer:"
   print $ f measurements
   putStr "Part 2 answer:"
-  print $ (f . sumWindow . mkWindow) measurements
+  print $ f . sumWindow . mkWindow $ measurements
 
 
 
