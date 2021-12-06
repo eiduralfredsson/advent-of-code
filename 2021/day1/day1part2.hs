@@ -29,10 +29,7 @@ mkWindow _             = []
 sumWindow :: [(Int,Int,Int)] -> [Int]
 sumWindow xs = map (\(x,y,z) -> x+y+z) xs
 
--- Single is for day 1 part 1, Window is for day 1 part 2
-data ReportType = Single | Window
-
--- Output action. Takes the file path, the counting funtion (one of the above).
+-- Output action. Takes the file path and the counting funtion (one of the above).
 -- Example: report "input.txt" getIncCount''
 report :: String -> ([Int] -> Int) -> IO ()
 report path f = do
