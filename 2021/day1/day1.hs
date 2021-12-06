@@ -20,6 +20,8 @@ getIncCount'' [] = 0
 getIncCount'' [_] = 0
 getIncCount'' xs = sum $ zipWith (\x y -> if (y>x) then 1 else 0) xs $ tail xs
 
+-- Output action. Takes the file path and the counting funtion (one of the above).
+-- Example: report "input.txt" getIncCount''
 report :: String -> ([Int] -> Int) -> IO ()
 report path f = do
   content <- readFile path
