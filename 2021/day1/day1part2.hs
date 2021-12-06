@@ -29,7 +29,7 @@ mkWindow _             = []
 sumWindow :: [(Int,Int,Int)] -> [Int]
 sumWindow xs = map (\(x,y,z) -> x+y+z) xs
 
--- Output action. Takes the file path and the counting funtion (one of the above).
+-- Output action. Takes the file path and the counting funtion (one of the getIncCount* above).
 -- Example: report "input.txt" getIncCount''
 report :: String -> ([Int] -> Int) -> IO ()
 report path f = do
